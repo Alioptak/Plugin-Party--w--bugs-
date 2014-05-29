@@ -1,0 +1,32 @@
+name: Party
+main: fr.Alioptak.party.Party
+version: 1.0
+commands:
+   setborder:
+      description: set the size and the center of the map
+      permission: party.setborder
+      permission-message: error.
+   center:
+      description: remember the center of your map
+      permission: party.center
+      permission-message: error.
+   start:
+      description: start the game
+      permission: party.start
+      permission-message: error.
+   pause:
+      description: set on pause the game
+      permission: party.pause
+      permission-message: error.
+   STitle:
+      description: set the title of the scoreboard
+      permission: party.ST
+      permission-message: error.
+   ST:
+      description: set the title of the scoreboard
+      permission: party.ST
+      permission-message: error.
+   shootingmod:
+      description: shootingmod
+      permission: party.shootingmod
+      permission-message: error.
