@@ -102,9 +102,7 @@ int bord;
 			}}else{
 			min = min1;
 			sec = sec1;
-			ScoreboardManager manager = Bukkit.getScoreboardManager();
-			board = manager.getNewScoreboard();
-			final Objective objective = board.registerNewObjective("Test", "Test2");
+			
 
 			Bukkit.getScheduler().scheduleAsyncRepeatingTask(this, new Runnable(){
 				public void run() {
@@ -112,6 +110,9 @@ int bord;
 					if(pause == 0){
 						
 				for(Player pl : Bukkit.getOnlinePlayers()){	
+					ScoreboardManager manager = Bukkit.getScoreboardManager();
+					board = manager.getNewScoreboard();
+					final Objective objective = board.registerNewObjective("Test", "Test2");
 					Score score1 = objective.getScore(Bukkit.getOfflinePlayer(ChatColor.GREEN+"Players : "));
 					score1.setScore(Bukkit.getOnlinePlayers().length);
 					Score score3 = objective.getScore(Bukkit.getOfflinePlayer(ChatColor.RED+"Difficulty : "));
@@ -237,6 +238,7 @@ int bord;
 						
 					if(args.length == 1){
 					getConfig().set("scoreboard_title", args[0].toString());
+					saveConfig();
 					if(anti_msg == 0){
 					sender.sendMessage(ChatColor.YELLOW+"!=--------------------------------------------=!");
 					sender.sendMessage(ChatColor.GREEN+"The title of the scoreboard was changed.");
